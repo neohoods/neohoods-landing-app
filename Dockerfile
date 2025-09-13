@@ -16,7 +16,7 @@ COPY ./ /usr/local/app/
 ENV NODE_ENV=production
 
 # Install all the dependencies
-RUN npm ci  # Use npm ci for a clean install based on package-lock.json
+RUN npm install  # Install all dependencies including devDependencies
 
 # Install Angular CLI globally
 RUN npm install -g @angular/cli
