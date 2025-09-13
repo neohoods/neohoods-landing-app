@@ -43,7 +43,7 @@ jobs:
       - name: Push changes
         run: |
           git commit --amend -m "$(git log -1 --pretty=%B) [ci skip]"
-          git push --follow-tags origin main
+          git push --follow-tags origin master
 
       # Angular
       - name: Clear npm cache
@@ -80,7 +80,7 @@ jobs:
       - name: Deploy
         uses: qcastel/github-actions-update-helm@master
         with:
-          branch-name: main
+          branch-name: master
 
           git-release-bot-name: "bot-theopenshelf"
           git-release-bot-email: "bot@theopenshelf.dev"
