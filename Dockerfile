@@ -1,7 +1,7 @@
 # Stage 1: Compile and Build angular codebase
 
 # Use official node image as the base image
-FROM node:alpine3.21 as build
+FROM node:alpine3.21 AS build
 
 # Combine apk commands to reduce layers and improve caching
 RUN apk --no-cache add git vim bash openssh gnupg libxml2-utils jq openjdk21 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
@@ -18,8 +18,11 @@ ENV NODE_ENV=production
 # Install all the dependencies
 RUN npm ci  # Use npm ci for a clean install based on package-lock.json
 
+# Install Angular CLI globally
+RUN npm install -g @angular/cli
+
 # Generate the build of the application with the production environment
-RUN npm run build -- --configuration=production
+RUN ng build --configuration=production
 
 # Stage 2: Serve app with nginx server
 FROM nginx:latest
