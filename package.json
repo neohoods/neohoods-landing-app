@@ -15,7 +15,12 @@
     "format": "prettier --write \"**/*.{ts,html,scss,css,js,json,md}\"",
     "analyze": "ng build --configuration production --stats-json && npx webpack-bundle-analyzer dist/neohoods-landing/stats.json",
     "docker:build": "docker build -t neohoods-landing .",
-    "docker:run": "docker run -p 8080:80 neohoods-landing"
+    "docker:run": "docker run -p 8080:80 neohoods-landing",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:dry-run": "standard-version --dry-run"
   },
   "private": true,
   "dependencies": {
@@ -64,6 +69,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.6.2",
+    "standard-version": "^9.5.0",
     "typescript": "~5.9.2"
   }
 }
