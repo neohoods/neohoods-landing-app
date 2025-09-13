@@ -1,12 +1,21 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    directory: "/"
     schedule:
       interval: "daily"
     groups:
       angular-packages:
         patterns:
           - "@angular/*"
-          - "@taiga-ui/*"
           - "zone.js"
           - "rxjs"
+      dev-dependencies:
+        patterns:
+          - "@angular-eslint/*"
+          - "@typescript-eslint/*"
+          - "eslint*"
+          - "prettier"
+          - "typescript"
+          - "karma*"
+          - "jasmine*"
