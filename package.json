@@ -30,7 +30,7 @@
     "@angular/router": "^20.2.3",
     "@ng-bootstrap/ng-bootstrap": "^19.0.0",
     "bootstrap": "^5.3.3",
-    "bootstrap-scss": "^4.6.1",
+    "bootstrap-scss": "^5.3.4",
     "ng-animate": "^2.0.1",
     "ng-gallery": "^12.0.0",
     "ngx-masonry": "^14.0.1",
