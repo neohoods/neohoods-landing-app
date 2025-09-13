@@ -43,7 +43,7 @@ jobs:
       - name: Push changes
         run: |
           git commit --amend -m "$(git log -1 --pretty=%B) [ci skip]"
-          git push --follow-tags origin master
+          git push
 
       # Angular
       - name: Clear npm cache
