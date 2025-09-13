@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      angular-packages:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "@angular-eslint/*"
+          - "zone.js"
+          - "rxjs"
+          - "typescript"
+      bootstrap-packages:
+        patterns:
+          - "bootstrap*"
+          - "@ng-bootstrap/*"
+      testing-packages:
+        patterns:
+          - "jasmine*"
+          - "karma*"
+          - "@types/jasmine"
+      build-packages:
+        patterns:
+          - "eslint*"
+          - "prettier"
+          - "@typescript-eslint/*"

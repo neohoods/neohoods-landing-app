@@ -1,0 +1,35 @@
+<!--service css start-->
+<section class="saas2 services">
+  <div class="container saas2-services">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="title">
+          <div class="main-title">
+            <h2>Nos Services</h2>
+          </div>
+          <div class="sub-title">
+            <p class="sub-title-para">
+              Découvrez notre gamme complète de services pour transformer votre copropriété 
+              en un éco-quartier connecté et durable. Des solutions innovantes pour une vie 
+              communautaire moderne et respectueuse de l'environnement.
+            </p>
+          </div>
+        </div>
+      </div>
+      @for(data of services; track data){
+      <div class="col-lg-4 col-md-6 service-container">
+        <div class="service text-center">
+          <div class="img-block">
+            <img [src]="data.img" alt="" class="service-img img-fluid" />
+          </div>
+          <div class="service-feature">
+            <h4 class="feature-text text-center">{{data.title}}</h4>
+            <p>{{data.description}}</p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+<!--service css end-->

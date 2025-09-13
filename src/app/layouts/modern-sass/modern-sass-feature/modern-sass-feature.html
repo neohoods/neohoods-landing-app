@@ -1,0 +1,46 @@
+<!--feature css start-->
+<section class="saas2 feature booking" id="feaure">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="title">
+          <div class="main-title">
+            <h2>Fonctionnalités Avancées</h2>
+          </div>
+          <div class="sub-title">
+            <p class="sub-title-para">
+              Notre plateforme Neohoods intègre les dernières technologies pour offrir 
+              une expérience utilisateur exceptionnelle. Des outils puissants et intuitifs 
+              pour une gestion moderne de votre éco-quartier.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8 col-md-7">
+        <div class="center-text justify-content-center">
+          <div class="image-container">
+            <img
+              src="assets/images/saas2/advance-feature/01.png"
+              alt=""
+              class="img-fluid advance-feature-img"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-5">
+        @for(data of features; track data){
+        <div>
+          <div class="center-content justify-content-start">
+            <img [src]="data.img" alt="" class="img-fluid" />
+            <div class="feature-content">
+              <h5 class="feature-head">{{data.title}}</h5>
+              <p class="feature-para">{{data.description}}</p>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+<!--feature css end-->

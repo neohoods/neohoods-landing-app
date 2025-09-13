@@ -1,0 +1,16 @@
+@import "theme/variable";
+$primary: #2d7d32; // Vert principal éco-quartier
+$secondary: #4caf50; // Vert secondaire
+$light: #81c784; // Vert clair
+$dark: #1b5e20; // Vert foncé
+$accent: #66bb6a; // Vert accent
+$success: #4caf50; // Vert succès
+$info: #26a69a; // Teal pour l'info
+$warning: #ff9800; // Orange pour les alertes
+$danger: #f44336; // Rouge pour les erreurs
+@import "theme/style";
+@import "theme/responsive";
+@import "theme/customize";
+@import "theme/nav";
+@import "theme/theme-dark";
+@import "theme/theme-rtl";

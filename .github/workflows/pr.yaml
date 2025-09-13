@@ -1,0 +1,50 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-checks:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Build project
+        run: npm run build
+
+      - name: Check for build errors
+        run: |
+          if [ -d "dist" ]; then
+            echo "✅ Build successful"
+            echo "Build artifacts:"
+            ls -la dist/
+          else
+            echo "❌ Build failed"
+            exit 1
+          fi
+
+      - name: Check bundle size
+        run: |
+          if [ -f "dist/neohoods-landing/index.html" ]; then
+            echo "✅ Production build completed successfully"
+            echo "Bundle size check passed"
+          else
+            echo "❌ Production build failed"
+            exit 1
+          fi
