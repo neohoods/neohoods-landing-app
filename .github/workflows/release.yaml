@@ -9,7 +9,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[ci skip]') && startsWith(github.event.head_commit.message, '[release]')"
-
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
