@@ -10,19 +10,19 @@ import { Component } from "@angular/core";
 export class ModernSassBusiness {
   business = [
     {
-      title: "Gestion Digitale Complète",
+      title: "Social",
       description:
-        "Centralisez tous les aspects de votre copropriété : documents, réunions, votes et communication en un seul endroit.",
+        "Chat communautaire, portail d'information et répertoire des habitants pour renforcer les liens entre résidents et faciliter la communication.",
     },
     {
-      title: "Communauté Connectée",
+      title: "Space",
       description:
-        "Renforcez les liens entre résidents grâce à notre chat communautaire et nos outils de partage d'informations.",
+        "Gestion complète des espaces communs et conciergerie pour optimiser l'utilisation et la réservation de vos équipements partagés.",
     },
     {
-      title: "Développement Durable",
+      title: "Installation & Intégration",
       description:
-        "Contribuez à la transition écologique avec nos services de drive partagé et de gestion optimisée des ressources.",
+        "Nous venons dans votre copropriété pour installer notre solution qui s'intègre parfaitement avec votre système d'accès existant.",
     },
   ];
 }

@@ -12,7 +12,7 @@ export class ModernSassServices {
       img: "assets/images/saas2/our-feature/1.png",
       title: "Portal Digital",
       description:
-        "Gérez votre copropriété en ligne avec notre plateforme intuitive. Accès 24/7 aux documents, réunions et informations importantes.",
+        "Gérez votre copropriété en ligne avec notre plateforme intuitive. ",
     },
     {
       img: "assets/images/saas2/our-feature/2.png",
@@ -22,21 +22,21 @@ export class ModernSassServices {
     },
     {
       img: "assets/images/saas2/our-feature/3.png",
-      title: "Support Syndic",
+      title: "Repertoire des Habitants",
       description:
-        "Accompagnement personnalisé pour votre syndic. Outils de gestion avancés et support technique dédié pour une administration optimale.",
+        "Un répertoire des habitants avec leurs informations de contact pour pouvoir se contacter en cas d'urgence ou pour une question ou un besoin spécifique.",
     },
     {
       img: "assets/images/saas2/our-feature/4.png",
-      title: "Drive Partagé",
+      title: "Installation & Intégration",
       description:
-        "Optimisez les livraisons et réduisez l'empreinte carbone. Service de drive mutualisé pour tous les résidents de votre éco-quartier.",
+        "Nous venons dans votre copropriété pour installer notre solution qui s'intègre parfaitement avec votre système d'accès existant.",
     },
     {
       img: "assets/images/saas2/our-feature/5.png",
-      title: "Chambres d'Hôtes",
+      title: "Chambres d'Hôtes et espaces communs",
       description:
-        "Monétisez vos espaces inutilisés. Plateforme de location de chambres d'hôtes entre résidents pour une économie collaborative.",
+        "Partager des espaces communs entre les résidents pour une économie collaborative.",
     },
     {
       img: "assets/images/saas2/our-feature/6.png",

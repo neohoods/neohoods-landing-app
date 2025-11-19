@@ -1,11 +1,171 @@
-.logo-container img {
-    margin: 0 auto;
-    max-height: 150px !important;
-    width: auto !important;
-    object-fit: contain;
+// Container principal
+.footer-padding {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    @media (max-width: 768px) {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
-.footer-contant .logo-container,
-.footer-contant .footer-para {
-    text-align: center;
+.services-column {
+    margin-top: 1rem;
+}
+
+.copyright-text {
+    margin-top: 1rem;
+}
+
+// Colonnes du footer
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    // Alignement pour desktop
+    @media (min-width: 992px) {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    // Alignement pour mobile
+    @media (max-width: 991px) {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
+
+// Section Brand (Logo)
+.footer-brand {
+    @media (min-width: 992px) {
+        align-items: flex-start;
+    }
+
+    @media (max-width: 991px) {
+        align-items: center;
+    }
+}
+
+// Logo
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img {
+        max-height: 120px;
+        width: auto;
+        object-fit: contain;
+
+        @media (max-width: 768px) {
+            max-height: 100px;
+        }
+    }
+}
+
+// Paragraphes
+.footer-para {
+    width: 100%;
+
+    p {
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+    }
+}
+
+// Titres des sections
+.footer-title {
+    margin-bottom: 1rem;
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+}
+
+// Liste des services
+.footer-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        margin-bottom: 0.5rem;
+        transition: all 0.2s ease;
+
+        span {
+            font-size: 0.95rem;
+            display: inline-block;
+        }
+
+        &:hover {
+            transform: translateX(4px);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 991px) {
+            text-align: center;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+// Contact
+.contact-info {
+    width: 100%;
+
+    p {
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    span {
+        word-break: break-word;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(4px);
+    }
+
+    @media (max-width: 991px) {
+        justify-content: center;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+// Alignement responsive des colonnes
+@media (max-width: 991px) {
+    .footer-column {
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
 }

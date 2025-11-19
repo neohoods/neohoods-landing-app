@@ -9,15 +9,15 @@
       <div class="col-md-10 offset-md-1">
         <div class="title">
           <div class="main-title">
-            <h2 >screen shot</h2>
+            <h2 >Captures d'écran</h2>
           </div>
           <div class="sub-title">
             <p class="sub-title-para">
-              We believe we have created the most efficient SaaS landing page
-              for your users. Landing page with features that will convince you
-              to use it for your SaaS business.
+              Découvrez notre plateforme en action. Des fonctionnalités conçues
+              pour simplifier la gestion de votre copropriété et renforcer la
+              vie communautaire.
             </p>
-          </div>
+          </div>  
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
       >
         @for(screenshot of screenshots; track screenshot){
         <ng-template carouselSlide class="item">
-          <img [src]="screenshot.img" alt="" class="img-fluid" />
+          <img [src]="getImageSrc(screenshot)" alt="" class="img-fluid screenshot-image" />
         </ng-template>
         }
       </owl-carousel-o>

@@ -64,6 +64,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "port": 4200,
+            "open": false
+          },
           "configurations": {
             "production": {
               "buildTarget": "neohoods-landing:build:production"
