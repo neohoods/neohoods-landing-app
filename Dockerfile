@@ -15,9 +15,6 @@ RUN npm install
 # Install Angular CLI globally
 RUN npm install -g @angular/cli@20
 
-# Install the missing build package as dev dependency
-RUN npm install --save-dev @angular-devkit/build-angular
-
 # Generate the build of the application
 RUN ng build --configuration production
 
